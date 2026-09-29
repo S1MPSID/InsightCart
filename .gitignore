@@ -1,0 +1,96 @@
+# ---------------------------------------------------
+# InsightCart - repository-wide ignore rules
+# ---------------------------------------------------
+
+# --- Secrets / environment configuration ---
+# Never commit real credentials. Only .env.example is tracked.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+secrets.json
+secrets.yaml
+secrets.yml
+credentials.json
+credentials.yml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Python virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+# Empty legacy venv directory that shipped in backend/
+backend/venv/
+
+# --- Python tooling caches ---
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# --- Node / frontend ---
+node_modules/
+frontend/frontend/node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+
+# --- Local databases / data artefacts ---
+*.sqlite
+*.sqlite3
+*.db
+*.log
+pgdata/
